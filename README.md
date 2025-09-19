@@ -32,3 +32,25 @@ Evitar tener todas las bases de datos corriendo al mismo tiempo y consumiendo re
 ```powershell
 net start <NombreDelServicio>
 ```
+
+### Desactivar un servicio
+
+```powershell
+net stop <NombreDelServicio>
+```
+
+### Verificar si está corriendo
+
+```powershell
+Get-Process | Where-Object { $_.ProcessName -match "mysqld|postgres|sqlservr" }
+```
+
+### Verificar puertos activos
+
+Aqui se encuentran los puertos mas comunes en los cuales las base de datos estan escuchando.
+
+```powershell
+netstat -ano | findstr :3306   # MySQL
+netstat -ano | findstr :5432   # PostgreSQL
+netstat -ano | findstr :1433   # SQL Server
+```
