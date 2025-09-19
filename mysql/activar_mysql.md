@@ -12,7 +12,7 @@ net start MySQL94
 
 Nota:El "94" es la que yo tengo.
 
-## 🚀 Verificar que esta activo
+## 🚀 Verificar que esta activo(PowerShell)
 
 ```powershell
 Get-Process | Where-Object { $_.ProcessName -match "mysqld" }
@@ -26,4 +26,5 @@ netstat -ano | findstr :3306
 
 Nota:
 -Debe salir algo como "LISTENING".
+
 -Si el puerto 3306 esta ocupado,no iniciara.Puedes cambiar el puerto en el archivo "my.ini".(Buscar un video en yotube).
