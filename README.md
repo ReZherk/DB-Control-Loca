@@ -54,3 +54,6 @@ netstat -ano | findstr :3306   # MySQL
 netstat -ano | findstr :5432   # PostgreSQL
 netstat -ano | findstr :1433   # SQL Server
 ```
+
+- [Para saber el nombre correcto del servicio](./NombreDelServicio.md)  
+  Conocer el nombre del servicio que deseas,este puede variar segun la version,por eso es bueno revisar cual tienes instalado.
